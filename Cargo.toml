@@ -9,7 +9,7 @@ license = "MIT"
 edition = "2018"
 
 [dependencies]
-bitcoind = { version = "0.24.0" }
+bitcoind = { git = "https://github.com/weareseba/bitcoind", branch = "feature/proxy" }
 electrum-client = { version="0.8.0", default-features = false }
 nix = { version="0.22.0", optional = true }
 log = "0.4"
