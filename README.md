@@ -18,14 +18,14 @@ assert_eq!(header.height, 0);
 In your project Cargo.toml, activate the following features
 
 ```yml
-electrsd = { version= "0.23", features = ["corepc-node_23_1", "electrs_0_9_1"] }
+electrsd = { version= "0.35", features = ["corepc-node_23_1", "electrs_0_9_1"] }
 ```
 
 Then use it:
 
 ```rust
-let bitcoind_exe = bitcoind::downloaded_exe_path().expect("bitcoind version feature must be enabled");
-let bitcoind = bitcoind::BitcoinD::new(bitcoind_exe).unwrap();
+let bitcoind_exe = corepc_node::downloaded_exe_path().expect("bitcoind version feature must be enabled");
+let bitcoind = corepc_node::Node::new(bitcoind_exe).unwrap();
 let electrs_exe = electrsd::downloaded_exe_path().expect("electrs version feature must be enabled");
 let electrsd = electrsd::ElectrsD::new(electrs_exe, bitcoind).unwrap();
 ```
