@@ -10,8 +10,10 @@ edition = "2018"
 categories = ["cryptography::cryptocurrencies", "development-tools::testing"]
 
 [dependencies]
-corepc-node = { version = "0.10.0" }
-corepc-client = { version = "0.10.0" }
+#corepc-node = { version = "0.10.0" }
+corepc-node = { git = "https://github.com/AminaBank/corepc", branch = "feature/usr" }
+#corepc-client = { version = "0.10.0" }
+corepc-client = { git = "https://github.com/AminaBank/corepc", branch = "feature/usr" }
 electrum-client = { version = "0.24.0", default-features = false }
 log = { version = "0.4" }
 
